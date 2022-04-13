@@ -12,8 +12,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public SeekBar sBar;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
         sBar = (SeekBar) findViewById(R.id.seekBar);
         sBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 showTable(progress);
@@ -30,9 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 //write custom code to on start progress
-
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
@@ -43,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         public void showTable(int num) {
             TextView textView = findViewById(R.id.textView1);
             textView.setText("Multiplication table of " + num);
-
             ArrayList<String> table = new ArrayList<>();
                 for (int j = 1; j <= 10; j++) {
                     String s = num + " x " + j + " = " + (num * j);
